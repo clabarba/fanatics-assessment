@@ -1,3 +1,10 @@
+This code repo is for my assessment with Fanatics team
+
+My goal is to flex my skillset in full stack development
+
+Showcasing my ability in leveraging powerful technologies to build a modern webapps.
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -20,17 +27,36 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Stack is
+NextJs 
+    - JavaScript
+    - CSS/SCSS
+    - ShadCn
+    - Tailwind 
+    - ThreeJs
+    - Clerk Auth
 
-To learn more about Next.js, take a look at the following resources:
+## Hosting
+Vercel for hosting
+    - Vercel is a simple and powerful hosting providor for many frameworks, but especially for NextJs
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Database
+Prisma/PlanetScale for MySql DB for API limit functionality
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  - Install:
+    - `npm i -D prisma`
+    - `npx prisma init`
+    - You should see config files for prisma at this point
+  - Usage:
+    - Prisma is the connector for the App to Planetscale
+    - We define data models for this integeration inside `schema.prisma`
+    - When defining new models OR setting up your local with existing models:
+      - use `npx prisma generate` to make those same models available for Node modules
+      - then run `npx prisma db push` to push those models to your MySql DB hosted in PlanetScale
+    - To view your data for any configured data models:
+      - `npx prisma studio`
+      - you should see a browser tab load automatically for [http://localhost:5555](http://localhost:5555)
+      ## CAUTION - below steps will wipe your database
+    - To clear you're entire prisma DB:
+      - `npx prisma migrate reset`
+      - Then run `npx prisma generate` and finally `npx prisma db push`
