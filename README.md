@@ -9,6 +9,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+See .env.example for how to configure your local .env file
+
 First, run the development server:
 
 ```bash
